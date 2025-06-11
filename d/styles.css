@@ -1,0 +1,19 @@
+.progress-wrapper {
+  margin: 10px 0;
+  background: #eee;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 20px;
+  width: 100%;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #4caf50;
+  transition: width 2s linear;
+}
+
+.progress-bar.filled {
+  width: 100%;
+}
