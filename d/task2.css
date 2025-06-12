@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: aquamarine;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.add-box {
+  width: 60px;
+  height: 60px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s;
+}
+
+.add-box:hover {
+  background-color: #ccc;
+}
+
+.note-box {
+  background-color: #a3f7a3;
+  padding: 15px;
+  border-radius: 8px;
+  min-width: 120px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Note App</title>
+  <link rel="stylesheet" href="task2.css">
+</head>
+<body>
+  <h2 class="heading">Note App</h2>
+  <div class="container" id="noteContainer">
+    <div class="add-box" id="addBox">+</div>
+  </div>
+
+  <script>
+    const addBox = document.getElementById("addBox");
+    const noteContainer = document.getElementById("noteContainer");
+
+    // Function to create a new note
+    function createNote() {
+      const note = document.createElement("div");
+      note.className = "note-box";
+      note.contentEditable = true;
+      note.textContent = "Write here...";
+
+      // Single click on + adds before addBox
+      noteContainer.insertBefore(note, addBox);
+
+      // Double click on note removes it
+      note.addEventListener("dblclick", () => {
+        note.remove();
+      });
+
+      // Move + box to end
+      noteContainer.appendChild(addBox);
+    }
+
+    // On single click of + box
+    addBox.addEventListener("click", createNote);
+  </script>
+</body>
+</html>
